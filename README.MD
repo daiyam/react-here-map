@@ -9,10 +9,6 @@ components.
 The components can be imported and easily rendered. It also comes with seamless
 configuration and modifications.
 
-## Demo
-
-[See it here](https://limistah.github.io/react-here-map/)
-
 ## Installation
 
 Using NPM:
