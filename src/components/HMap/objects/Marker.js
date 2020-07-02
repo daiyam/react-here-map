@@ -17,6 +17,7 @@ function Marker(props) {
     objectEvents,
     platform,
     ui,
+    draggable,
     __options
   } = merge(
     { setViewBounds: true, updateMarker: false, marker: null, getMarker() {} },
@@ -48,6 +49,10 @@ function Marker(props) {
   // Create an icon, an object holding the latitude and longitude, and a marker:
   const _marker =
     updateMarker && marker ? marker : new H.map.Marker(coords, _options);
+    
+  if (draggable) {
+    _marker.draggable = true;
+  }
 
   // Checks if object of same coordinates have been added formerly
   const addedObjects = map.getObjects();
